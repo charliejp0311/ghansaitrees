@@ -1,0 +1,53 @@
+I want a banner login for either employee or mailing list recipient 
+
+Main page will be focused on company highlights
+
+Links to TENT UPDATE I want to post time-lapse video of the grow online as an attraction
+This will be like a PRoof of quality standards as well as give the plant a voice to the people 
+
+I also want to If we are going to be a dispensary develope a brand page with some products and the ability to 
+order from our website and pick up at the dispensary until an approved delivery method comes out ... we could 
+Do a door dash for pot 
+
+[back to website]
+
+I want to expand products online eventually but I think we should start with just our flower and purchasing edibles
+and extracts at wholesale prices to sell but all should have a place on line so I will need a products database
+this will help our initial tracking and be part of the business application needs to be worked on regularly
+
+initially website will be to maintain warehouse integrity and the develope into sales tool 
+
+EMPLOYEE ACCESS ONLY FOR THE FOLLOWING TO START MAIN SITE NEEDS AN EMPLOYEE LINK TO A LOGIN PAGE
+
+users:
+    :username string
+    :password password_digest
+ 
+products:
+    :id int
+    :name string
+    :thc% float
+    :cbd% float
+    :sativa% float
+    :indica% float
+    :category string
+        this will be a list of the categories that the state has :flower, :concentrate, :extract...
+    Link table will need a separate table for inventory where the following will pull from
+    :in_stock boolean
+    :qty_available float
+    :qty_sold integer
+
+inventory:
+    :product_id int
+    :product_qty float
+    :product_location_id string
+
+inventory_actions:
+    :product_id int
+    :action_type boolean sale/purchase-harvest
+    :action_qty float
+
+plants:
+    :strain_name string
+    :plant_date date
+    :growing boolean
